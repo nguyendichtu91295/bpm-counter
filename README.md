@@ -2,6 +2,8 @@
 
 A small mobile-first web app for estimating heart rate or running cadence by tapping along. Tap once for every heartbeat, or once for each running step (left and right). The displayed value starts at zero and updates from the second valid tap.
 
+Live app: [bpm-counter-nine.vercel.app](https://bpm-counter-nine.vercel.app)
+
 The rate is calculated over the elapsed time between up to the latest five taps and rounded to the nearest whole number. Taps less than 100 ms apart are ignored. A pause longer than five seconds starts a fresh calculation window while keeping the previous value visible until two new taps arrive. Reloading starts a new session. No measurements are stored or sent anywhere. This is a manual estimate, not a medical measurement.
 
 ## Development

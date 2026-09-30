@@ -6,9 +6,9 @@ task-004-publish-vercel
 
 ## Status
 
-RUNNING
+DONE
 
-<!-- STATUS: RUNNING -->
+<!-- STATUS: DONE -->
 
 ## Depends On
 
