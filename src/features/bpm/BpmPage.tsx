@@ -37,23 +37,12 @@ export function BpmPage() {
         <Button
           type="button"
           size="lg"
-          aria-label="Record one heartbeat or running step"
-          aria-describedby="tap-instructions"
-          className="aspect-square w-[min(72vw,18rem)] rounded-full bg-primary text-2xl shadow-[0_18px_45px_-20px_oklch(0.25_0.05_255/0.55)] touch-manipulation active:scale-[0.98]"
+          className="aspect-square w-[min(72vw,18rem)] rounded-full bg-primary text-2xl shadow-[0_18px_45px_-20px_rgb(0_0_0_/_0.45)] touch-manipulation active:scale-[0.98]"
           onClick={handleTap}
           onKeyDown={handleKeyDown}
         >
           Tap
         </Button>
-
-        <div className="max-w-sm space-y-2 px-2">
-          <p id="tap-instructions" className="text-sm leading-6 text-foreground/75 sm:text-base">
-            Tap once for each heartbeat, or once for every step—left and right.
-          </p>
-          <p className="text-xs leading-5 text-foreground/55 sm:text-sm">
-            A manual estimate, not a medical measurement.
-          </p>
-        </div>
       </section>
 
       <footer aria-hidden="true" className="h-5" />

@@ -13,8 +13,8 @@ Build a frontend web application that helps runners estimate a repeated event's 
 
 ## User Flow
 
-1. The user opens the page and sees a short instruction explaining that they should tap once for every heartbeat or every step. For cadence, count both left and right steps.
-2. The user taps the main button repeatedly during a measurement session.
+1. The user opens the page and sees the tap button and rate display, initialized to `0`.
+2. The user taps the main button to record events during a measurement session.
 3. After enough taps have been recorded, the app displays the current BPM estimate.
 4. The user continues tapping while the app continuously updates the current estimate.
 
@@ -32,14 +32,14 @@ Build a frontend web application that helps runners estimate a repeated event's 
 
 ## UI States
 
-- Initial state: show instructions and a BPM display initialized to `0`.
+- Initial state: show the tap button and a BPM display initialized to `0`.
 - Measuring state: show the live BPM estimate when available.
 - The primary tap target must be large and easy to use while running on a mobile screen.
-- Keep the UI minimal: one primary tap button and one prominent BPM number, with only essential supporting text.
+- Keep the UI minimal: one primary tap button and one prominent BPM number. Do not show manual-use instructions or a medical disclaimer.
 
 ## Safety and Scope
 
-- Clearly describe the result as an estimate based on manual taps, not a medical measurement.
+- Do not display a medical disclaimer in the MVP interface.
 - No account, backend, or external heart-rate device integration is required for the MVP.
 - Do not store or transmit measurement data; keep the session in browser memory only.
 
@@ -65,6 +65,7 @@ Runners who want to estimate heart rate or running cadence from manual taps with
 
 - A user can start tapping immediately after opening the page.
 - The page contains a primary tap button and a prominent BPM number.
+- The page does not show manual-use instructions or a medical disclaimer.
 - On initial page load, the BPM remains `0` until 2 valid taps are recorded, then updates using up to the latest 5 taps as a taps-per-60-seconds rate.
 - Two taps 0.5 seconds apart produce 120 BPM; five taps with the same spacing also produce 120 BPM.
 - The estimate updates after each additional valid tap without resetting the session.
